@@ -7,10 +7,13 @@ import { useEffect } from "react";
 export default function LoginPage({ providers }) {
     const {data,status} = useSession();
     const router = useRouter();
-    if (data)
-    {
-        router.push('/');
-    }
+    
+    useEffect(() => {
+        if (data) {
+            router.push('/');
+        }
+    }, [data, router]);  
+    
     if (status === "loading") {
         return null;
     }
