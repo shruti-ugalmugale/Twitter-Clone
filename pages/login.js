@@ -8,11 +8,9 @@ export default function LoginPage({ providers }) {
     const {data,status} = useSession();
     const router = useRouter();
     
-    useEffect(() => {
-        if (data) {
-            router.push('/');
-        }
-    }, [data, router]);  
+    if (data) {
+        router.push('/');
+    }
     
     if (status === "loading") {
         return null;
