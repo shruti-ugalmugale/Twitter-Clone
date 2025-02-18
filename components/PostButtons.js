@@ -77,7 +77,7 @@ export default function PostButtons({ likesCount = 0, likedByMe = false, bookmar
     }
 
     function redirectToPost() {
-        router.push(`http://localhost:3000/sugalmug/status/${id}`);
+        router.push(`https://twitter-clone-inky-xi.vercel.app/sugalmug/status/${id}`);
     }
 
     return (
